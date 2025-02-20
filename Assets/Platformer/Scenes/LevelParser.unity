@@ -201,6 +201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 2001328721}
   coinCountText: {fileID: 1715697777}
+  totalScoreText: {fileID: 1629240162}
 --- !u!4 &633447187
 Transform:
   m_ObjectHideFlags: 0
