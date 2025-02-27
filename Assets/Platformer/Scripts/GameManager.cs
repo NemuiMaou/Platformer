@@ -10,11 +10,12 @@ public class GameManager : MonoBehaviour
     private int score;
     private int coinCount;
     private int coinScoreIncrease = 100;
+    private int brickBreakScoreIncrease = 100;
     
     // Update is called once per frame
     void Update()
     {
-        int timeLeft = 300 - (int)Time.time;
+        int timeLeft = 100 - (int)Time.time;
         timerText.text = $"Time: \n {timeLeft}";
 
         if (Input.GetMouseButtonDown(0))  
