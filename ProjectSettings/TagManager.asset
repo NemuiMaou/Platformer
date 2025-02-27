@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Brick
   - QuestionBox
+  - Water
+  - FinishLine
   layers:
   - Default
   - TransparentFX
@@ -14,8 +16,8 @@ TagManager:
   - Water
   - UI
   - 
-  - 
-  - 
+  - Player
+  - LevelBlocks
   - 
   - 
   - 

@@ -9,8 +9,12 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI totalScoreText;
     private int score;
     private int coinCount;
-    private int coinScoreIncrease = 100;
-    private int brickBreakScoreIncrease = 100;
+    public int coinScoreIncrease = 100;
+    public int brickBreakScoreIncrease = 100;
+    public int winningScoreIncrease = 10000;
+    private bool winOrLose = true;
+    
+    
     
     // Update is called once per frame
     void Update()
@@ -33,13 +37,25 @@ public class GameManager : MonoBehaviour
 
                 if (myObject.CompareTag("QuestionBox"))
                 {
-                    coinCount++;
+                    CoinIncrease();
                     ScoreIncrease(coinScoreIncrease);
-                    String coinFormat = coinCount.ToString("00");
-                    coinCountText.text = "x" + coinFormat;
+                    
                 }
             }
         }
+
+        if (timeLeft <= 0 && winOrLose)
+        {
+            winOrLose = false;
+            Debug.Log("You Lose!");
+        }
+    }
+
+    public void CoinIncrease()
+    {
+        coinCount++;
+        String coinFormat = coinCount.ToString("00");
+        coinCountText.text = "x" + coinFormat;
     }
 
     public void ScoreIncrease(int points)
@@ -47,5 +63,15 @@ public class GameManager : MonoBehaviour
         score += points;
         String scoreFormat = score.ToString("000000");
         totalScoreText.text = "Mario\n" + scoreFormat;
+    }
+
+    public void winCheck()
+    {
+        if (winOrLose)
+        {
+            winOrLose = false;
+            Debug.Log("You Win!!");
+            ScoreIncrease(winningScoreIncrease);
+        }
     }
 }

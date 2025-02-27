@@ -14,6 +14,6 @@ public class CameraPan : MonoBehaviour
     void Update()
     {
         float direction = Input.GetAxis("CameraPan");
-        transform.position += new Vector3(direction, 0f, 0f) * speed * Time.deltaTime;
+        transform.position += new Vector3(direction, 0f, 0f) * (speed * Time.deltaTime);
     }
 }

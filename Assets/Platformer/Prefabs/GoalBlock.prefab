@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2652198492393551389}
   - component: {fileID: 2652198492393551388}
   m_Layer: 8
-  m_Name: Question
-  m_TagString: QuestionBox
+  m_Name: GoalBlock
+  m_TagString: FinishLine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 57f0b7cd540f5174a891bed3d4544531, type: 2}
+  - {fileID: 2100000, guid: ef42c65ccec331a4d9c48fd16f8369d1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
